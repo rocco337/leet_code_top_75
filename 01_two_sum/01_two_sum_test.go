@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestHuffman(t *testing.T) {
+func TestTwoSum(t *testing.T) {
 
 	t.Run("Find two numbers which sum equals to target", func(t *testing.T) {
 		vector := []int{2, 7, 11, 15, 3}

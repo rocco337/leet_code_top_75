@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestHuffman(t *testing.T) {
+func TestBuySellStock(t *testing.T) {
 
 	t.Run("Find max profit - should be 5", func(t *testing.T) {
 		prices := []int{7, 1, 5, 3, 6, 4}
@@ -27,7 +27,7 @@ func TestHuffman(t *testing.T) {
 	})
 }
 
-func BenchmarkHuffman(b *testing.B) {
+func BenchmarkBuySellStock(b *testing.B) {
 	prices := []int{7, 1, 5, 3, 6, 4}
 	expected := 5
 
