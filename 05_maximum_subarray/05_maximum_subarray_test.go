@@ -8,7 +8,7 @@ func TestMaxiumumSubArray(t *testing.T) {
 		input := []int{-2, 1, -3, 4, -1, 2, 1, -5, 4}
 		expected := 6
 
-		actual := MaximumSubArray(input)
+		actual := MaximumSubArray(input, 0, len(input)-1)
 		if actual != expected {
 			t.Error("Expected: ", expected, "Actual: ", actual)
 		}
