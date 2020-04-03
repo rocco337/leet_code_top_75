@@ -13,4 +13,14 @@ func TestMaxiumumSubArray(t *testing.T) {
 			t.Error("Expected: ", expected, "Actual: ", actual)
 		}
 	})
+
+	t.Run("Two negative numbers - number closer to = should be returned", func(t *testing.T) {
+		input := []int{-2, -1}
+		expected := -1
+
+		actual := MaximumSubArray(input, 0, len(input)-1)
+		if actual != expected {
+			t.Error("Expected: ", expected, "Actual: ", actual)
+		}
+	})
 }

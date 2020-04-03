@@ -1,6 +1,8 @@
 package maximumsubarray
 
-import "math"
+import (
+	"math"
+)
 
 //Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 func MaximumSubArray(array []int, left int, right int) int {
@@ -22,22 +24,22 @@ func maxCrossingSubArray(array []int, left int, mid int, right int) int {
 	leftSum := math.MinInt32
 	sum := 0
 	i := mid
-	for i > left {
-		sum += array[left]
+	for i >= left {
+		sum += array[i]
 		if sum > leftSum {
-			leftSum = array[left]
+			leftSum = sum
 		}
 
 		i--
 	}
 
-	i = mid
+	i = mid + 1
 	rightSum := math.MinInt32
 	sum = 0
-	for i < right {
-		sum += array[right]
+	for i <= right {
+		sum += array[i]
 		if sum > rightSum {
-			rightSum = array[right]
+			rightSum = sum
 		}
 		i++
 	}
@@ -47,7 +49,7 @@ func maxCrossingSubArray(array []int, left int, mid int, right int) int {
 }
 
 func max(array []int) int {
-	max := 0
+	max := math.MinInt32
 
 	i := 0
 	for i < len(array) {
