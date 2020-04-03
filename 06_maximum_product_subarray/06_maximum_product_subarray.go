@@ -1,57 +1,41 @@
 package maximumproductsubarray
 
 //MaximumProductSubArray ...
-func MaximumProductSubArray(array []int, left int, right int) int {
-	if left == right {
-		return array[left]
+func MaximumProductSubArray(array []int) int {
+
+	if len(array) == 1 {
+		return array[0]
 	}
 
-	middle := (left + right) / 2
-
-	l := MaximumProductSubArray(array, left, middle)
-	r := MaximumProductSubArray(array, middle+1, right)
-	c := crossMaximumProduct(array, left, right, middle)
-	return max([]int{l, r, c})
-}
-
-func crossMaximumProduct(array []int, left int, right int, middle int) int {
-	localProduct := 1
-	maxLeftProduct := 0
-
-	i := middle
-	for i >= left {
-		localProduct *= array[i]
-		if localProduct > maxLeftProduct {
-			maxLeftProduct = localProduct
-		}
-
-		i--
-	}
-
-	maxRightProduct := 0
-	localProduct = 1
-	i = middle + 1
-	for i <= right {
-		localProduct *= array[i]
-		if localProduct > maxRightProduct {
-			maxRightProduct = localProduct
-		}
-
-		i++
-	}
-	return maxLeftProduct * maxRightProduct
-}
-
-func max(array []int) int {
-	max := 0
-
+	globalMax := 0
+	maxUntilNow := 0
+	minUntilNow := 0
 	i := 0
 	for i < len(array) {
-		if array[i] > max {
-			max = array[i]
-		}
+		temp := maxUntilNow
+
+		maxUntilNow = max(array[i], max(array[i]*maxUntilNow, array[i]*minUntilNow))
+		minUntilNow = min(array[i], min(array[i]*temp, array[i]*minUntilNow))
+
+		globalMax = max(maxUntilNow, globalMax)
+
 		i++
 	}
+	return globalMax
+}
 
-	return max
+func max(left int, right int) int {
+	if left > right {
+		return left
+	}
+
+	return right
+}
+
+func min(left int, right int) int {
+	if left < right {
+		return left
+	}
+
+	return right
 }
