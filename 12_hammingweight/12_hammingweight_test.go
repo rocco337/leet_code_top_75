@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestHammingweightt *testing.T) {
+func TestHammingweight(t *testing.T) {
 	t.Run("Get count of 1s in integer", func(t *testing.T) {
 		expected := 3
 		actual := HammingWeight(11)
