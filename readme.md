@@ -35,7 +35,7 @@
 - [x] Coin Change - [https://leetcode.com/problems/coin-change/](https://leetcode.com/problems/coin-change/)  
 - [x] Longest Increasing Subsequence - [https://leetcode.com/problems/longest-increasing-subsequence/](https://leetcode.com/problems/longest-increasing-subsequence/)  
 - [x] Longest Common Subsequence - [https://leetcode.com/problems/longest-common-subsequence/](https://leetcode.com/problems/longest-common-subsequence/)  
-- [ ] Word Break Problem - [https://leetcode.com/problems/word-break/](https://leetcode.com/problems/word-break/)  
+- [x] Word Break Problem - [https://leetcode.com/problems/word-break/](https://leetcode.com/problems/word-break/)  
 - [ ] Combination Sum - [https://leetcode.com/problems/combination-sum-iv/](https://leetcode.com/problems/combination-sum-iv/)  
 - [ ] House Robber - [https://leetcode.com/problems/house-robber/](https://leetcode.com/problems/house-robber/)  
 - [ ] House Robber II - [https://leetcode.com/problems/house-robber-ii/](https://leetcode.com/problems/house-robber-ii/)  
