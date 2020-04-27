@@ -13,14 +13,13 @@ func Rob(nums []int) int {
 		if i+2 >= len(nums) {
 			break
 		}
-		next := nums[i+2]
 
-		if i+2 < len(nums) && dp[i]+nums[i+2] > dp[i+2] {
-			dp[i+2] = dp[i] + nums[i+2]
+		if i+2 < len(nums) {
+			dp[i+2] = max(dp[i+2], dp[i]+nums[i+2])
 		}
 
-		if i-1 >= 0 && dp[i-1]+next > dp[i+2] {
-			dp[i+2] = dp[i-1] + nums[i+2]
+		if i-1 >= 0 {
+			dp[i+2] = max(dp[i+2], dp[i-1]+nums[i+2])
 		}
 
 		i++
@@ -32,4 +31,11 @@ func Rob(nums []int) int {
 
 	return dp[len(nums)-1]
 
+}
+
+func max(a int, b int) int {
+	if a > b {
+		return a
+	}
+	return b
 }

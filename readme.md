@@ -38,7 +38,7 @@
 - [x] Word Break Problem - [https://leetcode.com/problems/word-break/](https://leetcode.com/problems/word-break/)  
 - [x] Combination Sum - [https://leetcode.com/problems/combination-sum-iv/](https://leetcode.com/problems/combination-sum-iv/)  
 - [x] House Robber - [https://leetcode.com/problems/house-robber/](https://leetcode.com/problems/house-robber/)  
-- [ ] House Robber II - [https://leetcode.com/problems/house-robber-ii/](https://leetcode.com/problems/house-robber-ii/)  
+- [x] House Robber II - [https://leetcode.com/problems/house-robber-ii/](https://leetcode.com/problems/house-robber-ii/)  
 - [ ] Decode Ways - [https://leetcode.com/problems/decode-ways/](https://leetcode.com/problems/decode-ways/)  
 - [ ] Unique Paths - [https://leetcode.com/problems/unique-paths/](https://leetcode.com/problems/unique-paths/)  
 - [ ] Jump Game - [https://leetcode.com/problems/jump-game/](https://leetcode.com/problems/jump-game/)
